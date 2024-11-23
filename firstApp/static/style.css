@@ -8,6 +8,16 @@ body{
     background-color: rgb(31, 52, 78);
     color: whitesmoke;
 }
+
+nav{
+    height: 40px;
+    width: 100%;
+    background-color: rgb(52, 67, 81);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 1.3rem;
+}
 .container{
     display: flex;
     justify-content: center;

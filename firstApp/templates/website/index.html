@@ -1,16 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django Learning</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <div class="container">
-     <h1>Web Dev with Django</h1>
-     <p>This is a home page</p>
-   </div>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container flex justify-center items-center bg-gray-800">
+    <h1 class="text-slate-200  p-4  justify-center items-center">WEB DEV WITH <span class="bg-purple-500 p-3 rounded-full shadow-lg shadow-blue-600 cursor-pointer text-black">DJANGO</span> </h1>
+    <p class="font-bold text-blue-100">This is Django home page</p>
+</div>
+{% endblock %}
