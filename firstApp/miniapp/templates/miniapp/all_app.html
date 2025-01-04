@@ -1,11 +1,23 @@
 {% extends "layout.html" %}
 
-{% block title %}Django - Contact{% endblock %}
+{% block title %}Django - Miniapp{% endblock %}
 
 {% block content %}
     <div class="container">
-        <h1>All types of available app</h1>
+        <h1>All types of available <span class="text-red-500">Chai</span></h1>
         <p>This is all app page.</p>
     </div>
+   <div class="grid grid-cols-3 gap-5">
+    {% for chai in chais  %}
+       <div class="chai-item max-w-fit p-3 rounded-xl border-1 border-gray-200 bg-gray-200 m-4">
+         <img src="{{chai.image.url}}" alt="{{chai.name}}" class="h-[250px] w-[340px]">
+         <h2 class="text-4xl text-gray-700 font-semibold">{{chai.name}}</h2>
+         <a href="{% url "chai_detail" chai.id %}">
+            <button class="bg-blue-400 w-full mt-7 px-10 py-3 rounded-xl text-black text-xl font-semibold">{{chai.type}} - {{chai.id}}</button>
+         </a>
+       </div>
+       {% endfor %}
+    </div>
 {% endblock %}
+
 
