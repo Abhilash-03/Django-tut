@@ -3,9 +3,10 @@
 {% block title %}Miniapp - Detail{% endblock %}
 
 {% block content %}
-  <h1>Chai Detail Page</h1>
-  <hr>
+<h1 class="text-6xl py-5 font-semibold">{{chai.name}}</h1>
+<div class="p-10 bg-gray-300 text-black m-5 rounded-xl">
+  <img src="{{chai.image.url}}" alt="{{chai.name}}" class="text-center flex justify-center items-center h-3/4 w-full">
   <h3 class="text-2xl font-semibold">{{chai.name}}</h3>
   <p class="text-gray-200 text-lg">{{chai.description}}</p>
- 
+</div>
 {% endblock %}
